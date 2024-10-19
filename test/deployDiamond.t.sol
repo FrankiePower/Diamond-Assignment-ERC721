@@ -97,6 +97,8 @@ contract DiamondDeployer is DiamondUtils, IDiamondCut {
         MerkleFacet(address(diamond)).claim(proof);
     }
 
+    // This empty function is required for the DiamondCutFacet to work.
+    // It is not used in this test.
     function diamondCut(
         FacetCut[] calldata _diamondCut,
         address _init,
